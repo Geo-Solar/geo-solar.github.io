@@ -1,35 +1,13 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#173e35"><meta name="description" content="AeroCRNS — منصة محاكاة رطوبة التربة، تصحيح CTS، والحماية الحرارية والتحكم الذكي في الري.">
-<title>AeroCRNS — غرفة التحكم</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23173e35'/%3E%3Cpath d='M17 44C15 20 37 13 49 15C50 34 36 46 17 44Z' fill='%23c0d893'/%3E%3Cpath d='M16 49L39 26' stroke='%23f6f6ee' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="views.css"><link rel="stylesheet" href="refinements.css">
-<script src="data.js" defer></script><script src="model.js" defer></script><script src="app.js" defer></script>
-</head>
-<body>
-<aside class="sidebar">
-  <a href="#overview" class="brand" aria-label="AeroCRNS الرئيسية"><span class="brand-mark">⌁</span><span dir="ltr">Aero<span>CRNS</span><small>FIELD INTELLIGENCE</small></span></a>
-  <div class="workspace-label">مساحة العمل <span>01</span></div>
-  <nav aria-label="القائمة الرئيسية">
-    <a href="#overview" data-view="overview" class="active"><i data-icon="grid"></i>نظرة عامة<span class="nav-dot"></span></a>
-    <a href="#cts" data-view="cts"><i data-icon="sliders"></i>مختبر CTS<span class="tiny-tag">تجريبي</span></a>
-    <a href="#thermal" data-view="thermal"><i data-icon="shield"></i>الحماية الحرارية</a>
-    <a href="#records" data-view="records"><i data-icon="chart"></i>سجل القياسات</a>
-    <a href="#method" data-view="method"><i data-icon="layers"></i>كيف يعمل النظام</a>
-  </nav>
-  <div class="sidebar-bottom"><div class="sensor-mini"><span class="status-dot"></span><div>محطة AeroCRNS<small>BORON-10 · نموذج محاكاة</small></div><i data-icon="radio"></i></div><p>قياس أوسع.<br><strong>قرار ري أدق.</strong></p><div class="side-foot">AeroCRNS <span>RESEARCH PLATFORM / 01</span></div></div>
-</aside>
-<div class="shell">
-  <header class="topbar"><div class="breadcrumb">مساحة العمل <span>/</span> <strong id="crumb">نظرة عامة</strong></div><div class="top-actions"><span class="simulation-badge"><span class="status-dot"></span>بيئة محاكاة</span><span class="top-divider"></span><span class="avatar">AC</span></div></header>
-  <main id="main"><div class="page-heading"><div><p class="eyebrow">FIELD OVERVIEW</p><h1>كل قطرة، بقرار مدروس.</h1><p class="muted">صورة أوضح للتربة. تحكّم أذكى في الري.</p></div><button class="btn" id="export"><i data-icon="download"></i>تصدير القياسات</button></div>
-  <div class="context-bar"><div><i data-icon="pin"></i><strong>الحقل التجريبي 01</strong><span class="subtle">تربة رملية طميية · برسيم</span></div><span class="mono">01 — 14 AUG 2026</span></div>
-  <section class="metrics" id="metrics"></section>
-  <div class="overview-grid"><section class="panel map-panel"><div class="panel-head"><div><p class="eyebrow">FIELD INTELLIGENCE</p><h2>نظرة على الحقل</h2></div><span class="pill">متوسط حقلي</span></div><div id="field-map"></div><div class="map-bottom"><span><b class="legend-dot"></b>نطاق استشعار توضيحي</span><span>CRNS · محطة واحدة</span></div></section><section id="valve" class="valve-card"></section></div>
-  <section class="panel trend-panel"><div class="panel-head"><div><p class="eyebrow">SOIL MOISTURE</p><h2>الرطوبة تقود القرار</h2></div><div class="chart-key"><span><b style="background:#376b57"></b>بعد CTS</span><span><b style="background:#a9b2a4"></b>قبل CTS</span><span><b style="background:#c3924e"></b>عتبة الري</span></div></div><div id="chart"></div><div id="timeline"></div></section>
-  </main>
-  <footer><span>AeroCRNS <b>·</b> استشعار حقلي. إدارة واعية للمياه.</span><span>CTS عامل بحثي مقترح يحتاج إلى تحقق ميداني.</span></footer>
-</div>
-<div id="toast" role="status"></div>
-</body></html>
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="GeoSolar Control — محاكاة تعليمية لتوازن الطاقة الجيوحرارية والشمسية والتخزين"><title>GeoSolar Control™ | غرفة التحكم</title><link rel="stylesheet" href="style.css"></head>
+<body><header><a class="brand" href="#dashboard" dir="ltr"><span class="mark">G<span>↗</span></span><span>GeoSolar <b>Control™</b><small>HYBRID ENERGY MANAGEMENT</small></span></a><div class="header-note">GeoSolar-24™ <span class="badge">نموذج تجريبي</span></div></header>
+<nav aria-label="أقسام المنصة"><button data-tab="dashboard" class="active">01 <span>غرفة التحكم</span></button><button data-tab="simulation">02 <span>محاكاة 24 ساعة</span></button><button data-tab="controls">03 <span>مدخلات التحكم</span></button><button data-tab="evidence">04 <span>Saudi Data Evidence</span></button></nav>
+<main><div class="title-row"><div><div class="eyebrow">GEOSOLAR CONTROL / SIMULATION LAB</div><h1 id="pageTitle">طاقة متكاملة. خرج متوازن.</h1><p>جيوحرارية + طاقة شمسية مركّزة + تخزين حراري</p></div><div class="simulation-label"><span></span> محاكاة تعليمية · لا توجد حساسات متصلة</div></div>
+<section id="dashboard" class="view"><div class="control-bar"><div><label for="hour">LIVE HOUR SELECTOR</label><select id="hour" dir="ltr"></select></div><div class="presets"><button data-hour="6">06:00</button><button data-hour="12">12:00</button><button data-hour="20">20:00</button></div><form id="quickForm"><label for="setpoint">Grid Setpoint <span>MW</span></label><input id="setpoint" type="number" min="0.01" max="20" step="0.01" value="1.50" required dir="ltr"><button class="primary" type="submit">↻ إعادة المحاكاة</button></form></div><p id="feedback" role="status" class="feedback">اختر الساعة لاستعراض حالة التشغيل المحسوبة.</p>
+<div id="kpis" class="kpis" aria-live="polite"></div>
+<div class="middle"><article class="panel flow-panel"><div class="panel-head"><h2>تدفق الطاقة</h2><span class="eyebrow">ENERGY FLOW</span></div><div id="mode" class="mode"></div><div id="flow" class="flow" dir="ltr"></div><p id="flowNote" class="muted"></p><div id="sourceMetrics" class="source-metrics"></div></article><article class="panel storage-panel"><div class="panel-head"><h2>التخزين الحراري</h2><span class="eyebrow">TES</span></div><div id="storageGauge" class="gauge"><div><strong id="socBig"></strong><span>STORAGE SOC</span></div></div><div id="storageInfo"></div></article></div>
+<div class="charts"><article class="panel"><div class="panel-head"><h2>خرج الشبكة مقابل المطلوب</h2><span>MW</span></div><div id="gridChart"></div></article><article class="panel"><div class="panel-head"><h2>مساهمة مصادر الطاقة</h2><span>MW</span></div><div id="mixChart"></div></article><article class="panel"><div class="panel-head"><h2>حالة التخزين خلال اليوم</h2><span>SOC %</span></div><div id="socChart"></div></article><article class="panel"><div class="panel-head"><h2>درجات الحرارة</h2><span>°C</span></div><div id="tempChart"></div></article></div><div class="section-head"><h2>السياق السعودي</h2><button id="evidenceLink">البيانات والمصادر ←</button></div><div class="national" id="national"></div></section>
+<section id="simulation" class="view" hidden><article class="panel"><h2>سجل التشغيل من 00:00 إلى 24:00</h2><p class="muted">كل صف يعرض قرار التشغيل وحالة التخزين بعد خطوة ساعة، وفق ترتيب ملف المصدر. صف 24:00 خطوة إضافية للمطابقة؛ لا تُجمع الصفوف الـ25 بوصفها طاقة يوم واحد.</p><div class="table-wrap"><table id="simulationTable"></table></div></article></section>
+<section id="controls" class="view" hidden><article class="panel controls-panel"><h2>افتراضات النموذج</h2><p class="muted">تُطبّق التغييرات على كامل التسلسل الزمني ابتداءً من الشحنة الأولية.</p><form id="inputsForm"><div class="input-grid" id="inputFields"></div><p id="inputError" role="alert"></p><button class="primary" type="submit">تطبيق وإعادة المحاكاة</button> <button id="reset" type="button">استعادة قيم الملف</button></form><div class="method"><h3>كيف يُحسب التشغيل؟</h3><p>القدرة المتاحة = الجيوحرارية + الشمسية. يُوجّه الفائض إلى التخزين حتى امتلائه، ويُفرّغ التخزين لتعويض العجز حتى نفاده؛ ويُخفض الفائض المتبقي عند امتلائه.</p><p dir="ltr">Stability = max(0, 100 × (1 − |Grid Export − Setpoint| / Setpoint))</p><p>الكفاءة 90% عند الشحن و90% عند التفريغ، أي 81% للدورة الكاملة، لمطابقة حسابات الملف؛ رغم أن اسم المدخل في الملف هو Round-trip Efficiency. جميع قدرات التخزين بوحدات المكافئ الكهربائي. لا يفترض النموذج حد قدرة مستقلًا للشحن أو التفريغ.</p><p>DNI مؤشر نسبي من 0 إلى 1، وليس قياسًا بوحدة W/m². درجات الحرارة منحنيات افتراضية؛ لا يُستنتج منها أداء ترموديناميكي مُثبت.</p></div></article></section>
+<section id="evidence" class="view" hidden><article class="panel"><div class="panel-head"><h2>Saudi Data Evidence</h2><span class="badge">بيانات وطنية داعمة</span></div><p>هذه الأرقام تصف قطاع الكهرباء السعودي، ولا تُستخدم لإثبات أداء GeoSolar أو لتغذية نتائج المحاكاة.</p><div id="evidenceCards" class="evidence-cards"></div><div class="method"><h3>حدود الاستدلال</h3><p>الاستقرار ودرجات الحرارة والطاقة المنتجة في هذه المنصة نتائج نموذج تعليمي وليست نتائج محطة ميدانية. أرقام 2023 و2024 معروضة بسنتها المرجعية وليست ادعاءً بأنها أحدث بيانات متاحة.</p><p>المصدر التشغيلي: GeoSolar24_Smart_Platform_Simulation.xlsx، أوراق 24h_Simulation وControl_Inputs وSaudi_Data_Evidence. لم يُعدّل ملف Excel الأصلي.</p></div></article></section>
+<footer><span dir="ltr">GEOSOLAR-24™ / CONTROL LAB</span><span>نتائج محاكاة تجريبية — غير مثبتة ميدانيًا</span></footer></main><script src="model.js"></script><script src="app.js"></script></body></html>
